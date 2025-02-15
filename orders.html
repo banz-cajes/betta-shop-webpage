@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>BANZ BETTA</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="pic/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <form action="">
+            <div class="row">
+                <div class="col">
+                    <h3 class="title">Order Form</h3>
+
+                    <div class="inputBox">
+                        <span>Full Name:</span>
+                        <input type="text" placeholder="Juan Dela Cruz">
+                    </div>
+                    <div class="inputBox">
+                        <span>Mode of Payment:</span>
+                        <select>
+                            <option value="Gcash">G-CASH</option>
+                            <option value="COD">COD</option>
+                            <option value="Bank Transfer">BANK TRANSFER</option>
+                        </select>
+                    </div>
+                    <div class="inputBox">
+                        <span>Email:</span>
+                        <input type="email" placeholder="juandelacruz@example.com">
+                    </div>
+                    <div class="inputBox">
+                        <span>Address:</span>
+                        <input type="text" placeholder="Street - Barangay - Municipality - City">
+                    </div>
+                    <div class="inputBox">
+                        <label for="contactNumber">Contact Number:</label>
+                        <input type="number" id="contactNumber" name="contactNumber" placeholder="0907*******" pattern="[0-9]{10}" required>
+                    </div>
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>Number of Order:</span>
+                            <input type="tell" placeholder="0-10">
+                        </div>
+                        <div class="inputBox">
+                            <span>Size:</span>
+                            <select>
+                                <option value="S">Under Baby</option>
+                                <option value="X">Junior</option>
+                                <option value="L">Regular</option>
+                            </select>
+                        </div>
+
+                        <div class="checkBox">
+                            <span>Optional Only:</span>
+                            <input type="checkbox" id="salt" name="salt-1" value="Rock Salt">
+                            <label for="salt">Rock Salt</label>
+                            <input type="checkbox" id="talisay" name="talisay-2" value="Talisay">
+                            <label for="talisay">Almond Leaves</label>
+                            <input type="checkbox" id="plant" name="plant-1" value="Aqua plant">
+                            <label for="plant">Aqua plant</label>
+                            <input type="checkbox" id="meds" name="meds-1" value="Amazon Meds">
+                            <label for="meds">Amazon Meds</label>
+                        </div>
+
+                    </div>
+                </div>
+
+                    <div class="buttons">
+                        <a href="javascript:void(0);" class="checkout-btn" onclick="confirmCheckout()">Check-out</a>
+                        <a href="javascript:void(0);" class="close-btn" onclick="confirmCancel()">Cancel</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <script>
+            function confirmCheckout() {
+                if (confirm('Are you sure you want to check out the order?')) {
+                    alert('Order checked out!');
+                    window.location.href = 'index.html#buyhere';
+                }
+            }
+
+            function confirmCancel() {
+                if (confirm('Are you sure you want to cancel your order?')) {
+                    alert('Order canceled!');
+                    window.location.href = 'index.html#buyhere';
+                }
+            }
+        </script>
+</body>
+
+</html>
